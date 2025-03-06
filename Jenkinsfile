@@ -19,7 +19,11 @@ pipeline {
                 sh 'mvn clean package -DskipTests' // Ensure Maven is installed on the agent
             }
         }
-
+         stage('Test') {
+            steps {
+                sh 'pwd'
+            }
+        }
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t ecr_docker  .'
