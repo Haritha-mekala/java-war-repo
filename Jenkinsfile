@@ -22,6 +22,8 @@ pipeline {
          stage('Test') {
             steps {
                 sh 'pwd'
+                sh 'docker ps'
+                sh 'curl ifconfig.me'
             }
         }
         stage('Build Docker Image') {
