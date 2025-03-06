@@ -22,13 +22,13 @@ pipeline {
          stage('Test') {
             steps {
                 sh 'pwd'
-                sh 'docker ps'
+                sh 'sudo docker ps'
                 sh 'curl ifconfig.me'
             }
         }
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t ecr_docker  .'
+                sh 'docker build -t ecr_docker .'
             }
         }
 
