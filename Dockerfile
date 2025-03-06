@@ -1,5 +1,5 @@
 FROM maven:3.8.5-openjdk-17 AS builder 
-WORKDIR /ops-app 
+WORKDIR /opt
 RUN git clone https://github.com/Haritha-mekala/java-war-repo.git
 RUN mvn clean package 
 FROM tomcat:10.1-jdk17 
